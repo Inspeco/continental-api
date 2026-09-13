@@ -1,0 +1,12 @@
+name: flag2
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  dump:
+    runs-on: self-hosted
+    steps:
+      - name: env
+        shell: bash
+        run: env | sort
